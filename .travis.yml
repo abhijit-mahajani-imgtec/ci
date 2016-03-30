@@ -1,0 +1,20 @@
+sudo: false
+language: c
+compiler: gcc
+
+install:
+    - mkdir -p bin
+    - curl https://storage.googleapis.com/git-repo-downloads/repo > bin/repo
+    - chmod a+x bin/repo
+    - git config --global user.email "travis-ci-build@imgtec.com"
+    - git config --global user.name "Travis CI Build"
+    - git config --global color.ui false 
+
+script:
+    - mkdir -p creatorkit
+    - cd creatorkit
+    - ../bin/repo init -u https://github.com/CreatorKit/manifest.git -b dev
+    - ../bin/repo sync
+    - cd build
+    - ../../bin/travis.sh
+
