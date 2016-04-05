@@ -13,7 +13,7 @@ do_mark () {
 
 # main process
 do_main () {
-    make
+    make V=s
     return $?
 }
 
