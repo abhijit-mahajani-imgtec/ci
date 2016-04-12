@@ -3,7 +3,7 @@ language: c
 compiler: gcc
 
 before_install:
-    - sudo apt-get install openssl libssl-dev ca-certificates
+    - apt-get install openssl libssl-dev ca-certificates
 
 install:
     - mkdir -p bin
