@@ -1,9 +1,9 @@
-sudo: false
+sudo: required
 language: c
 compiler: gcc
 
 before_install:
-    - apt-get install openssl libssl-dev ca-certificates
+    - sudo apt-get install openssl libssl-dev ca-certificates
 
 install:
     - mkdir -p bin
