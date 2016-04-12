@@ -2,6 +2,9 @@ sudo: false
 language: c
 compiler: gcc
 
+before_install:
+    - sudo apt-get install openssl libssl-dev ca-certificates
+
 install:
     - mkdir -p bin
     - curl https://storage.googleapis.com/git-repo-downloads/repo > bin/repo
